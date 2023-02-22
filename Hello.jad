@@ -1,0 +1,37 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 05/03/2004 17:14:17
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   Hello.java
+
+package cryptoloader;
+
+import java.awt.Component;
+import java.io.PrintStream;
+import javax.swing.JDialog;
+
+// Referenced classes of package cryptoloader:
+//            CryptClass, HelloDep2
+
+public class Hello
+    implements CryptClass
+{
+
+    Hello()
+    {
+        System.out.println("hi");
+        HelloDep2 dep2 = new HelloDep2(this);
+        dep2.useHello();
+    }
+
+    public void madeit()
+    {
+        System.out.println("you made it");
+        JDialog d = new JDialog();
+        d.setVisible(true);
+    }
+
+    public static void main(String args[])
+    {
+        new Hello();
+    }
+}
